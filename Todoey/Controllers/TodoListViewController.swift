@@ -17,6 +17,7 @@ class TodoListViewController: UITableViewController {
         super.viewDidLoad()
         
 //        loadItems()
+        
     }
     
     //MARK - TableView Datasource Methods
@@ -74,6 +75,7 @@ class TodoListViewController: UITableViewController {
             self.itemArray.append(newItem)
             
             self.saveItems()
+            
         }
         
         alert.addTextField { (alertTextField) in
@@ -134,7 +136,6 @@ extension TodoListViewController: UISearchBarDelegate {
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
         loadItems(with: request, predicate: predicate)
-        
         
     }
     
